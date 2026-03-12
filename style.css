@@ -1,143 +1,42 @@
-/* ---------------- GLOBAL --------------- */
-body {
-  margin: 0;
-  font-family: "Poppins", Arial, sans-serif;
-  background: linear-gradient(135deg, #e8f1f8, #ffffff);
-  color: #222;
-  overflow-x: hidden;
+/* ------------------ ANIMATED SKILL BARS ------------------ */
+
+.skill-box {
+  margin: 25px 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* ---------------- NAVBAR --------------- */
-nav {
-  background: #ffffff;
-  padding: 15px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  border-bottom: 1px solid #e2e6ea;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
-
-nav a {
-  margin: 0 22px;
-  text-decoration: none;
+.skill-title {
   font-weight: 600;
-  font-size: 17px;
+  font-size: 18px;
   color: #0a3d62;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #17a2b8;
-}
-
-/* ---------------- HERO SECTION --------------- */
-.hero {
-  background: linear-gradient(135deg, #0a3d62, #17a2b8);
-  color: white;
-  padding: 120px 20px;
-  text-align: center;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  animation: fadeDown 1.3s ease;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin: 0;
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 20px;
-  max-width: 70%;
-  margin: 15px auto 30px;
-  opacity: 0.95;
-}
-
-.hero .btn {
-  background: white;
-  padding: 14px 30px;
-  text-decoration: none;
-  color: #0a3d62;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.25);
-}
-
-.hero .btn:hover {
-  background: #e9f7fc;
-  transform: translateY(-4px);
-}
-
-/* ------------ FADE ANIMATION ----------- */
-@keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-25px); }
-  to { opacity: 1; transform: translateY(0px); }
-}
-
-/* ---------------- CARDS --------------- */
-.container {
-  width: 82%;
-  margin: 50px auto;
-}
-
-.card {
-  background: #ffffff;
-  padding: 28px;
-  border-radius: 16px;
-  margin-bottom: 25px;
-  border: 1px solid #dce3e8;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
-  animation: fadeUp 1s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
-  border-color: #17a2b8;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ---------------- BUTTONS --------------- */
-.btn {
-  display: inline-block;
-  padding: 12px 26px;
-  background: #17a2b8;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #0a3d62;
-  transform: translateY(-4px);
-}
-
-/* ---------------- FOOTER --------------- */
-footer {
-  margin-top: 40px;
-  padding: 18px;
-  background: #0a3d62;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  margin-bottom: 8px;
   letter-spacing: 0.5px;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 14px;
+  background: #dbe7ee;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.skill-per {
+  height: 14px;
+  background: linear-gradient(90deg, #17a2b8, #0a3d62);
+  border-radius: 20px;
+  width: 0%;
+  transition: width 2.2s ease-in-out;
+}
+
+/* Fade skill bars on scroll */
+@keyframes loadSkill {
+  from { width: 0%; }
+  to { width: var(--skill-percentage); }
+}
+.reveal {
+  animation: fadeUp 1.2s ease forwards;
 }
 
 
