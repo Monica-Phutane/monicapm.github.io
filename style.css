@@ -1,58 +1,106 @@
+/* ---------------------- GLOBAL ---------------------- */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f6f9;
+  background: #f2f5f9;
   color: #333;
 }
 
+/* ---------------------- HEADER ---------------------- */
 header {
-  background: #1a73e8;
-  padding: 15px;
+  background: linear-gradient(135deg, #1a73e8, #673ab7);
+  padding: 28px;
   text-align: center;
   color: white;
-  font-size: 22px;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
+/* ---------------------- NAVBAR ---------------------- */
 nav {
-  background: #0f5ac6;
-  padding: 10px;
+  background: white;
+  padding: 12px;
   text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav a {
   text-decoration: none;
-  color: white;
-  margin: 0 15px;
+  color: #1a73e8;
+  margin: 0 18px;
   font-size: 18px;
+  padding-bottom: 6px;
+  font-weight: 600;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #673ab7;
+  border-bottom: 2px solid #673ab7;
 }
 
+/* ---------------------- CONTAINER ---------------------- */
 .container {
   width: 85%;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
-h1, h2 {
-  color: #1a73e8;
-}
-
+/* ---------------------- CARDS ---------------------- */
 .card {
   background: white;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ---------------------- BUTTONS ---------------------- */
+.btn {
+  padding: 12px 22px;
+  background: #1a73e8;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #673ab7;
+}
+
+/* ---------------------- LINKS ---------------------- */
+a {
+  color: #1a73e8;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #673ab7;
+}
+
+/* ---------------------- FOOTER ---------------------- */
 footer {
   margin-top: 40px;
   background: #1a73e8;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 18px;
+  font-size: 16px;
 }
+
+
