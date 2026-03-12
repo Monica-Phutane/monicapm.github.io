@@ -1,188 +1,146 @@
-/* ---------------- GLOBAL --------------- */
+/* ---------------- GLOBAL COLORS (COLORFUL THEME) ---------------- */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #e9f2ff, #ffffff, #f4f9ff);
+  background: linear-gradient(135deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
+  background-size: 300% 300%;
+  animation: bgAnimation 12s ease infinite;
   color: #222;
   overflow-x: hidden;
 }
 
-/* Smooth scroll */
+/* Background Animation (smooth color flow) */
+@keyframes bgAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/* ---------------- FLOATING BACKGROUND SHAPES --------------- */
-.bg-shape {
-  position: fixed;
-  z-index: -1;
-  border-radius: 50%;
-  filter: blur(70px);
-  opacity: 0.55;
-  animation: float 10s infinite ease-in-out alternate;
-}
-
-.shape1 {
-  width: 300px;
-  height: 300px;
-  background: #bae6ff;
-  top: 5%;
-  left: -80px;
-}
-
-.shape2 {
-  width: 250px;
-  height: 250px;
-  background: #d4c2ff;
-  bottom: 5%;
-  right: -70px;
-}
-
-.shape3 {
-  width: 180px;
-  height: 180px;
-  background: #c3f5ff;
-  top: 40%;
-  right: -50px;
-}
-
-@keyframes float {
-  from { transform: translateY(0) translateX(0); }
-  to   { transform: translateY(25px) translateX(20px); }
-}
-
-/* ---------------- NAVBAR (SIDE BY SIDE) --------------- */
+/* ---------------- NAVBAR (COLORFUL & MODERN) ---------------- */
 nav {
-  background: #ffffff;
-  padding: 18px 15px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 18px;
   display: flex;
   justify-content: center;
   gap: 40px;
-  border-bottom: 1px solid #dce3e8;
+  border-bottom: 1px solid #e6e6e6;
+  backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
-  z-index: 999;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  z-index: 1000;
 }
 
 nav a {
   text-decoration: none;
-  color: #0a3d62;
+  color: #4a148c;
   font-size: 18px;
   font-weight: 600;
-  transition: 0.3s ease;
-  padding-bottom: 5px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: #1283a8;
+  color: #ff6f61;
   transform: translateY(-2px);
 }
 
-/* ---------------- HERO SECTION (MODERN) --------------- */
+/* ---------------- HERO SECTION (MULTICOLOR) ---------------- */
 .hero {
-  background: linear-gradient(120deg, #0a3d62, #1283a8);
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+  background-size: 250% 250%;
+  animation: heroGradient 10s ease infinite;
   color: white;
   text-align: center;
   padding: 130px 20px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  animation: fadeDown 1.3s ease;
-  position: relative;
+}
+
+@keyframes heroGradient {
+  0% { background-position: left; }
+  50% { background-position: right; }
+  100% { background-position: left; }
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 50px;
   font-weight: bold;
-  margin-bottom: 15px;
+  text-shadow: 0 3px 20px rgba(0,0,0,0.2);
 }
 
 .hero p {
   font-size: 18px;
   max-width: 700px;
   margin: auto;
-  opacity: 0.95;
 }
 
 .hero .btn {
-  padding: 14px 28px;
-  background: #ffffff;
-  color: #0a3d62;
+  margin-top: 25px;
+  padding: 14px 30px;
+  background: white;
+  color: #c2185b;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  display: inline-block;
-  margin-top: 25px;
-  transition: 0.3s ease;
-  box-shadow: 0 8px 25px rgba(255,255,255,0.25);
+  transition: 0.3s;
 }
 
 .hero .btn:hover {
-  background: #e7f7ff;
   transform: translateY(-5px);
+  background: #ffe6f0;
 }
 
-@keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-25px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ---------------- CONTAINER --------------- */
+/* ---------------- CONTAINER ---------------- */
 .container {
   width: 85%;
-  margin: 50px auto;
+  margin: 60px auto;
 }
 
-/* ---------------- SECTION TITLES --------------- */
-.section-title {
-  font-size: 28px;
-  color: #0a3d62;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  position: relative;
-  letter-spacing: 1px;
-}
-
-.section-title::after {
-  content: "";
-  width: 60px;
-  height: 4px;
-  background: #1283a8;
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  border-radius: 4px;
-}
-
-/* ---------------- CARD DESIGN --------------- */
+/* ---------------- CARD DESIGN (COLORFUL SHADOWS) ---------------- */
 .card {
-  background: #ffffff;
+  background: white;
   padding: 30px;
   border-radius: 18px;
   margin-bottom: 28px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-  border: 1px solid #dce3e8;
-  transition: 0.3s ease;
-  animation: fadeUp 1s ease;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.18);
+  transition: 0.3s;
+  border-left: 6px solid #ff6f61;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-  border-left: 5px solid #1283a8;
+  box-shadow: 0 14px 30px rgba(255, 105, 180, 0.25);
+  border-left-color: #ff4081;
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* ---------------- SECTION TITLE ---------------- */
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #4a148c;
+  text-transform: uppercase;
+  position: relative;
 }
 
-/* ---------------- BUTTONS --------------- */
+.section-title::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #ff6f61;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  border-radius: 5px;
+}
+
+/* ---------------- BUTTON ---------------- */
 .btn {
-  display: inline-block;
   padding: 12px 26px;
-  background: #1283a8;
+  background: #ff6f61;
   color: white;
   border-radius: 10px;
   text-decoration: none;
@@ -191,11 +149,11 @@ nav a:hover {
 }
 
 .btn:hover {
-  background: #0a3d62;
+  background: #c2185b;
   transform: translateY(-4px);
 }
 
-/* ---------------- ANIMATED SKILL BARS --------------- */
+/* ---------------- ANIMATED SKILL BARS (COLORFUL) ---------------- */
 .skill-box {
   margin: 25px 0;
 }
@@ -204,35 +162,32 @@ nav a:hover {
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 8px;
-  color: #0a3d62;
+  color: #4a148c;
 }
 
 .skill-bar {
   width: 100%;
   height: 14px;
-  background: #dee9ef;
-  border-radius: 25px;
-  overflow: hidden;
+  background: #f9e3ff;
+  border-radius: 20px;
 }
 
 .skill-per {
   height: 14px;
-  background: linear-gradient(90deg, #1283a8, #0a3d62);
+  border-radius: 20px;
+  background: linear-gradient(90deg, #ff6f61, #c2185b, #7b1fa2);
   width: 0%;
-  border-radius: 25px;
   transition: width 2s ease;
 }
 
-/* ---------------- FOOTER --------------- */
+/* ---------------- FOOTER ---------------- */
 footer {
-  background: #0a3d62;
+  background: linear-gradient(120deg, #ff6f61, #c2185b);
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 50px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  letter-spacing: 0.5px;
 }
 
 
