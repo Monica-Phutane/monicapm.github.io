@@ -3,6 +3,20 @@
 <head>
   <title>Skills - Monica PM</title>
   <link rel="stylesheet" href="style.css">
+
+  <script>
+    // Skill bar animation trigger on scroll
+    window.addEventListener("scroll", function () {
+      const skills = document.querySelectorAll(".skill-per");
+      skills.forEach(skill => {
+        const rect = skill.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          skill.style.width = skill.getAttribute("data-percentage");
+        }
+      });
+    });
+  </script>
+
 </head>
 <body>
 
@@ -18,23 +32,67 @@
 <div class="container">
 
   <div class="card">
-    <h2>Programming Skills</h2>
-    <p>Python, SQL</p>
-  </div>
+      <h2 style="color:#0a3d62">Technical Expertise</h2>
+      <p style="font-size:16px; opacity:0.8;">
+        Below are my core technical competencies displayed with animated proficiency bars.
+      </p>
 
-  <div class="card">
-    <h2>Data Visualization</h2>
-    <p>Power BI, Tableau</p>
-  </div>
+      <!-- Python -->
+      <div class="skill-box">
+        <div class="skill-title">Python</div>
+        <div class="skill-bar">
+          <div class="skill-per" data-percentage="90%"></div>
+        </div>
+      </div>
 
-  <div class="card">
-    <h2>AI & ML</h2>
-    <p>Machine Learning, Deep Learning, NLP</p>
-  </div>
+      <!-- SQL -->
+      <div class="skill-box">
+        <div class="skill-title">SQL</div>
+        <div class="skill-bar">
+          <div class="skill-per" data-percentage="85%"></div>
+        </div>
+      </div>
 
-  <div class="card">
-    <h2>Tools</h2>
-    <p>Jupyter Notebook, Google Colab, GitHub</p>
+      <!-- Power BI -->
+      <div class="skill-box">
+        <div class="skill-title">Power BI</div>
+        <div class="skill-bar">
+          <div class="skill-per" data-percentage="88%"></div>
+        </div>
+      </div>
+
+      <!-- Tableau -->
+      <div class="skill-box">
+        <div class="skill-title">Tableau</div>
+        <div class="skill-bar">
+          <div class="skill-per" data-percentage="80%"></div>
+        </div>
+      </div>
+
+      <!-- Machine Learning -->
+      <div class="skill-box">
+        <div class="skill-title">Machine Learning</div>
+        <div class="skill-bar">
+          <div class="skill-per" data-percentage="75%"></div>
+        </div>
+      </div>
+
+      <!-- NLP -->
+      <div class="skill-box">
+        <div class="skill-title">Natural Language Processing (NLP)</div>
+        <div class="skill-bar">
+          <div class="skill-per" data-percentage="70%"></div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-box">
+        <div class="skill-title">Tools (Jupyter, Colab, GitHub)</div>
+        <div class="skill-bar">
+          <div class="skill-per" data-percentage="85%"></div>
+        </div>
+      </div>
+
   </div>
 
 </div>
