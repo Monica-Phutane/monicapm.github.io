@@ -1,106 +1,137 @@
-/* ---------------------- GLOBAL ---------------------- */
+/* ----------- GLOBAL STYLE ------------ */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f2f5f9;
+  font-family: 'Poppins', sans-serif;
+  background: #eef2f7;
   color: #333;
+  overflow-x: hidden;
 }
 
-/* ---------------------- HEADER ---------------------- */
-header {
-  background: linear-gradient(135deg, #1a73e8, #673ab7);
-  padding: 28px;
-  text-align: center;
+/* ----------- HERO BANNER ------------ */
+.hero {
+  background: linear-gradient(135deg, #5a4ff3, #a94ef7);
+  padding: 100px 20px;
   color: white;
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 1.3px;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-/* ---------------------- NAVBAR ---------------------- */
-nav {
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  animation: slideDown 1.2s ease;
+}
+
+.hero p {
+  font-size: 20px;
+  width: 70%;
+  margin: auto;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero .btn {
+  margin-top: 25px;
+  padding: 14px 30px;
   background: white;
-  padding: 12px;
+  color: #5a4ff3;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #ece8ff;
+  transform: translateY(-4px);
+}
+
+/* ----------- NAVBAR ------------ */
+nav {
+  background: #ffffff;
+  padding: 15px;
   text-align: center;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 nav a {
+  margin: 0 20px;
   text-decoration: none;
-  color: #1a73e8;
-  margin: 0 18px;
+  color: #5a4ff3;
   font-size: 18px;
-  padding-bottom: 6px;
   font-weight: 600;
 }
 
 nav a:hover {
-  color: #673ab7;
-  border-bottom: 2px solid #673ab7;
+  color: #a94ef7;
 }
 
-/* ---------------------- CONTAINER ---------------------- */
+/* ----------- CARD STYLE ------------ */
 .container {
   width: 85%;
-  margin: auto;
-  margin-top: 35px;
+  margin: 40px auto;
 }
 
-/* ---------------------- CARDS ---------------------- */
 .card {
   background: white;
   padding: 25px;
-  margin: 20px 0;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: 0.3s;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.4s;
+  transform: translateY(0);
+  animation: popIn 0.6s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* ---------------------- BUTTONS ---------------------- */
+/* ----------- BUTTONS ------------ */
 .btn {
-  padding: 12px 22px;
-  background: #1a73e8;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #5a4ff3;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: #673ab7;
+  background: #a94ef7;
+  transform: translateY(-4px);
 }
 
-/* ---------------------- LINKS ---------------------- */
-a {
-  color: #1a73e8;
-  font-weight: bold;
-}
-
-a:hover {
-  color: #673ab7;
-}
-
-/* ---------------------- FOOTER ---------------------- */
+/* ----------- FOOTER ------------ */
 footer {
-  margin-top: 40px;
-  background: #1a73e8;
+  background: #5a4ff3;
   color: white;
   text-align: center;
   padding: 18px;
+  margin-top: 30px;
   font-size: 16px;
+}
+
+/* ----------- ANIMATIONS ------------ */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-30px);}
+  to {transform: translateY(0);}
+}
+
+@keyframes popIn {
+  from {transform: scale(0.95);}
+  to {transform: scale(1);}
 }
 
 
