@@ -1,29 +1,159 @@
-/* -------- NAVBAR (SIDE-BY-SIDE) -------- */
+/* ---------------- GLOBAL --------------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f4f8fb;
+  color: #222;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------------- NAVBAR --------------- */
 nav {
   background: #ffffff;
   padding: 18px;
   display: flex;
   justify-content: center;
-  gap: 35px;
+  gap: 40px;
+  border-bottom: 1px solid #dce3e8;
   position: sticky;
   top: 0;
-  z-index: 999;
-  border-bottom: 1px solid #e2e6ea;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  z-index: 1000;
 }
 
 nav a {
   text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
   color: #0a3d62;
-  padding: 8px 0;
+  font-size: 18px;
+  font-weight: 600;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #17a2b8;
-  transform: translateY(-2px);
+  color: #1283a8;
 }
+
+/* ---------------- HERO --------------- */
+.hero {
+  background: linear-gradient(120deg, #0a3d62, #1283a8);
+  color: white;
+  text-align: center;
+  padding: 130px 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero .btn {
+  padding: 12px 28px;
+  background: #ffffff;
+  color: #0a3d62;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 25px;
+  transition: 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #e7f7ff;
+  transform: translateY(-4px);
+}
+
+/* ---------------- SECTIONS & CARDS --------------- */
+.container {
+  width: 85%;
+  margin: 50px auto;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #0a3d62;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #1283a8;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  border-radius: 4px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  border-left: 5px solid #1283a8;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.1);
+}
+
+/* ---------------- SKILL BARS --------------- */
+.skill-box {
+  margin: 25px 0;
+}
+
+.skill-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #0a3d62;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 14px;
+  background: #dbe7ee;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.skill-per {
+  height: 14px;
+  background: linear-gradient(90deg, #1283a8, #0a3d62);
+  width: 0%;
+  border-radius: 25px;
+  transition: width 2s ease;
+}
+
+/* ---------------- FOOTER --------------- */
+footer {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 50px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
 
 
