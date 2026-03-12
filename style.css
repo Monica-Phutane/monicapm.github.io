@@ -1,173 +1,161 @@
-/* --------- GLOBAL --------- */
+/* ----------------- GLOBAL ----------------- */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #e9f0ff, #f6e9ff);
-  color: #333;
+  font-family: "Poppins", sans-serif;
+  background: #e4fbff;
+  color: #232323;
   overflow-x: hidden;
-  animation: fadeBody 1.5s ease-in-out;
 }
 
-@keyframes fadeBody {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
 }
 
-/* --------- NAVBAR --------- */
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------- NAVBAR ----------------- */
 nav {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
   padding: 15px;
   text-align: center;
   position: sticky;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  border-bottom: 1px solid rgba(255,255,255,0.5);
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 nav a {
-  margin: 0 20px;
+  margin: 0 18px;
   text-decoration: none;
-  color: #5a36ff;
-  font-size: 18px;
   font-weight: 600;
-  position: relative;
+  color: #008cba;
+  font-size: 18px;
   padding-bottom: 5px;
 }
 
 nav a:hover {
-  color: #a14cff;
+  color: #8338ec;
 }
 
 nav a::after {
   content: "";
+  display: block;
   width: 0%;
   height: 3px;
-  background: #a14cff;
-  display: block;
+  background: #8338ec;
   margin: auto;
   transition: 0.3s;
-  border-radius: 50px;
 }
 
 nav a:hover::after {
   width: 80%;
 }
 
-/* --------- HERO SECTION --------- */
+/* ----------------- HERO SECTION (NEW UNIQUE DESIGN) ----------------- */
 .hero {
-  background: linear-gradient(135deg, #674bff, #a24dff);
-  padding: 110px 20px;
+  position: relative;
+  padding: 120px 20px;
   color: white;
   text-align: center;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  animation: heroFade 1.8s ease;
-}
-
-@keyframes heroFade {
-  from { transform: translateY(-40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  background: linear-gradient(135deg, #00bbf0, #8338ec);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 90%);
+  animation: fade-in 1.4s ease;
 }
 
 .hero h1 {
   font-size: 50px;
-  margin-bottom: 15px;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  margin: 0;
+  text-shadow: 0 3px 15px rgba(0,0,0,0.3);
+  animation: float 4s ease-in-out infinite;
 }
 
 .hero p {
   font-size: 20px;
-  width: 70%;
+  max-width: 70%;
   margin: auto;
   opacity: 0.9;
 }
 
-/* Call-to-Action Button */
 .hero .btn {
-  margin-top: 28px;
+  margin-top: 25px;
   padding: 14px 32px;
-  background: white;
-  color: #5b2dff;
+  background: #ffffff;
+  color: #008cba;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   transition: 0.3s;
-  font-size: 18px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
 .hero .btn:hover {
-  background: #efe7ff;
+  background: #e6f7ff;
   transform: translateY(-5px);
 }
 
-/* --------- CONTAINER --------- */
+/* ----------------- CONTAINER ----------------- */
 .container {
   width: 85%;
-  margin: 40px auto;
-  animation: fadeIn 1.4s ease;
+  margin: 60px auto;
+  animation: fade-in 1.4s ease;
 }
 
-/* Fade animation for sections */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* --------- CARD STYLE --------- */
+/* ----------------- CARD DESIGN (NEW) ----------------- */
 .card {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px);
-  padding: 28px;
-  border-radius: 18px;
-  margin-bottom: 30px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  transition: 0.35s ease;
-  animation: cardPop 0.7s ease;
-}
-
-@keyframes cardPop {
-  from { transform: scale(0.95); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  background: linear-gradient(135deg, #ffffffcc, #f2f8ffcc);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-left: 6px solid #00bbf0;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0px 6px 25px rgba(0,0,0,0.10);
+  transition: 0.25s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 30px rgba(0,0,0,0.15);
+  transform: scale(1.02);
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
+  border-left-color: #8338ec;
 }
 
-/* --------- BUTTONS --------- */
+/* ----------------- BUTTONS ----------------- */
 .btn {
-  display: inline-block;
   margin-top: 15px;
   padding: 12px 26px;
-  background: #6c45ff;
+  background: #00bbf0;
   color: white;
-  border-radius: 12px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
-  box-shadow: 0px 6px 15px rgba(108,69,255,0.3);
+  transition: 0.35s;
 }
 
 .btn:hover {
-  background: #a64dff;
-  transform: translateY(-4px) scale(1.03);
+  background: #8338ec;
+  transform: translateY(-4px);
+  box-shadow: 0px 6px 15px rgba(131,56,236,0.3);
 }
 
-/* --------- FOOTER --------- */
+/* ----------------- FOOTER ----------------- */
 footer {
-  background: linear-gradient(135deg, #6c45ff, #a64dff);
+  background: linear-gradient(135deg, #00bbf0, #8338ec);
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
   font-size: 16px;
-  box-shadow: 0 -6px 20px rgba(0,0,0,0.15);
+  margin-top: 50px;
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
 }
 
 
